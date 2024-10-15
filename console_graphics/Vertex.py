@@ -20,3 +20,6 @@ class Vertex:
     
     def getY(self):
         return self.__y
+    
+    def getZ(self):
+        return self.__z

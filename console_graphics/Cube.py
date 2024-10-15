@@ -18,8 +18,24 @@ class Cube:
         for triangle in triangles:
             self.__triangles.append(triangle)
 
-    def makeCube(self):
-        v1 = Vertex.Vertex(-1, -1, -1)
-        v2 = Vertex.Vertex(-1, -1, 1)
-        v3 = Vertex.Vertex(1, 1, -1)
-        self.__triangles.append(Triangle.Triangle(v1, v2, v3))
+    def makeCube(self, value):
+        v0 = Vertex.Vertex(value, value, value)
+        v1 = Vertex.Vertex(-value, value, value)
+        v2 = Vertex.Vertex(value, value, -value)
+        v3 = Vertex.Vertex(-value, value, -value)
+        v4 = Vertex.Vertex(value, -value, value)
+        v5 = Vertex.Vertex(-value, -value, value)
+        v6 = Vertex.Vertex(value, -value, -value)
+        v7 = Vertex.Vertex(-value, -value, -value)
+        self.__triangles.append(Triangle.Triangle(v0, v2, v3))
+        self.__triangles.append(Triangle.Triangle(v0, v1, v3))
+        self.__triangles.append(Triangle.Triangle(v0, v2, v3))
+        self.__triangles.append(Triangle.Triangle(v0, v2, v3))
+        self.__triangles.append(Triangle.Triangle(v0, v2, v3))
+        self.__triangles.append(Triangle.Triangle(v0, v2, v3)) # TODO
+        self.__triangles.append(Triangle.Triangle(v0, v2, v3))
+        self.__triangles.append(Triangle.Triangle(v0, v2, v3))
+        self.__triangles.append(Triangle.Triangle(v0, v2, v3))
+        self.__triangles.append(Triangle.Triangle(v0, v2, v3))
+        self.__triangles.append(Triangle.Triangle(v0, v2, v3))
+        self.__triangles.append(Triangle.Triangle(v0, v2, v3))
